@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "fried-rice",
+  "version": "0.0.1",
+  "description": "A chrome extension to switch host",
+  "background": {
+    "page": "html/background.html"
+  },
+  "icons": {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "permissions": [
+    "proxy"
+  ]
+}
