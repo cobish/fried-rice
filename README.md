@@ -1,3 +1,5 @@
+![](https://github.com/cobish/fried-rice/blob/master/img/icon.png)
+
 # fried-rice
 
 > 炒饭

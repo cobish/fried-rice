@@ -3,7 +3,6 @@
   "name": "fried-rice",
   "version": "0.0.1",
   "description": "快速简易切换 host",
-  "default_locale": "zh_CN",
   "icons": {
     "16": "img/icon.png",
     "48": "img/icon.png",
