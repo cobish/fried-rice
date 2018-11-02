@@ -5,20 +5,37 @@
   <title>炒饭 - popup页</title>
   <style>
     body {
-      font-family: 'Microsoft Yahei';
-      width: 500px;
-      min-height: 100px;
+      width: 250px;
+    }
+
+    #openBackground {
+      float: right;
+      cursor: pointer;
+    }
+
+    #openBackground:hover {
+      color: orange;
+    }
+
+    #content {
+      margin-top: 15px;
+    }
+
+    .cell {
+      margin-top: -1px;
+      padding: 8px;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
-  <div>
-    <a id="openBackground" href="#">设置</a>
-  </div>
-  <label><input type="radio" name="switch" value="0" checked>关闭</label>
-  <label><input type="radio" name="switch" value="1">开启</label>
+  <label><input type="checkbox" name="switch">开启代理</label>
+  <a id="openBackground">设置</a>
+  <div id="content"></div>
   
-  <script type="text/javascript" src="../js/lib/jquery-1.8.3.js"></script>
-  <script type="text/javascript" src="../js/popup.js"></script>
+  <script src="../js/lib/jquery-1.8.3.js"></script>
+  <script src="../js/proxy.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/popup.js"></script>
 </body>
 </html>

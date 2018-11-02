@@ -1,14 +1,3 @@
-// // 默认取消代理
-// var pac = "var FindProxyForUrl = function(url, host){return 'DIRECT';}";
-// var config = {
-//   mode: "pac_script",
-//   pacScript: {
-//     data: pac
-//   }
-// };
-
-// chrome.proxy.settings.set({value: config, scope: 'regular'}, function() {});
-
 class Setting {
   constructor () {
     this.storage = new Storage();
@@ -126,12 +115,16 @@ class Setting {
       const project = $self.attr('data-key');
       const val = $parent.find('textarea').val();
 
-      const hostList = _this.hosts[project];
+      let hostList = {};
       const arr = val.split('\n');
       arr.forEach(item => {
-        const host = item.split(' ');
-        hostList[host[1]] = host[0];
+        if (item) {
+          const host = item.split(' ');
+          hostList[host[1]] = host[0];
+        }
       });
+
+      _this.hosts[project] = hostList;
       _this.storage.set({ 'hosts': _this.hosts });
 
       $parent.hide();
